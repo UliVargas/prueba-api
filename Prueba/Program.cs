@@ -35,6 +35,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapGet("/", () => Results.Ok(new { status = "ok", message = "API viva" }));
+
 app.MapControllers();
 
 app.Run();
